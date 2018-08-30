@@ -1,5 +1,19 @@
-<h1><%= @note.title %></h1>
-<p><%= @note.body %></p>
-<%= link_to "Back", notes_path %>
-<%= link_to "Edit", edit_note_path(@note.id) %>
-<%= link_to "Delete", note_path(@note.id), method: :delete%>
+<div class="show-wrapper">
+  <div class="show-note">
+    <div class="note-title">
+      <div class="note-text">
+        <h1><%= @note.title %></h1>
+      </div>
+    </div>
+    <div class="note-body">
+      <div class="note-text">
+        <p><%= @note.body %></p>
+      </div>
+    </div>
+  </div>
+  <div class="note-options">
+    <%= link_to "Back", notes_path, {class: 'yellow'} %>
+    <%= link_to "Edit", edit_note_path(@note.id), {class: 'blue'} %>
+    <%= link_to "Delete", note_path(@note.id), {method: :delete, class: 'pink'} %>
+  </div>
+</div>

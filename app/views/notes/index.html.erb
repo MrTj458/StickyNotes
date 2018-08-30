@@ -1,8 +1,16 @@
-<h1>My Notes:</h1>
-<%= link_to 'New Note', new_note_path %>
-<hr>
-
-<% @notes.each do |note| %>
-  <%= link_to "#{note.title}", note_path(note.id) %>
-  <br>
-<% end %>
+<div class='note-index'>
+  <div class="index-header">
+    <h1>My Notes:</h1>
+  </div>
+  <hr>
+  <div class="index-body">
+    <div class="note new">
+      <%= link_to 'Create a New Note', new_note_path %>
+    </div>
+    <% @notes.each do |note| %>
+    <div class="note">
+      <%= link_to "#{note.title}", note_path(note.id) %>
+    </div>
+    <% end %>
+  </div>
+</div>

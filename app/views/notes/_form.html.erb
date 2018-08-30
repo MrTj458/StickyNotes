@@ -1,9 +1,19 @@
 <%= form_for @note do |n| %>
-  <%= n.label :title %>
-  <%= n.text_field :title %>
+  <div class="edit-title">
+    <%= n.label :title %>
+    <%= n.text_field :title %>
+  </div>
 
-  <%= n.label :body %>
-  <%= n.text_area :body %>
+  <div class="edit-body">
+    <div class="body-label">
+      <%= n.label :body %>
+    </div>
+    <div class="body-text">
+      <%= n.text_area :body %>
+    </div>
+  </div>
 
-  <%= n.submit %>
+  <div class="submit-button-wrapper">
+    <%= n.submit class: 'submit-button' %>
+  </div>
 <% end %>

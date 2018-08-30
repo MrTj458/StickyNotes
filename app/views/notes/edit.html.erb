@@ -1,2 +1,13 @@
-<h1>Edit <%= @note.title.downcase %>:</h1>
-<%= render 'notes/form' %>
+<div class="edit-wrapper">
+  <div class="edit-title">
+    <h1>Edit your note:</h1>
+  </div>
+  <div>
+    <%= render 'notes/form' %>
+  </div>
+  <div class="cancel-link-wrapper">
+    <div class="cancel-link">
+      <%= link_to 'Cancel', note_path(@note.id) %>
+    </div>
+  </div>
+</div>
